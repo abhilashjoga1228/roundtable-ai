@@ -1587,24 +1587,41 @@ export default function Home() {
       {!verdict && !loading ? (
         <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-5 py-6 sm:px-8 sm:py-7">
           {/* Minimal brand bar */}
-          <header className="mx-auto flex w-full max-w-6xl items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#8B5CF6]/35 bg-[#8B5CF6]/10 text-xs font-bold text-[#E9DDFF]">
-                RT
-              </div>
+          <header className="relative z-50 mx-auto flex w-full max-w-6xl items-center justify-between">
+  {/* Brand */}
+  <div className="flex items-center gap-3">
+    <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-[#8B5CF6]/35 bg-[#8B5CF6]/10 text-xs font-bold text-[#E9DDFF]">
+      RT
+    </div>
 
-              <span className="text-sm font-semibold tracking-wide text-[#F8FAFC]">
-                Round Table AI
-              </span>
-            </div>
+    <div>
+      <span className="block text-sm font-semibold tracking-wide text-[#F8FAFC]">
+        Round Table AI
+      </span>
 
-            <a
-              href="/decisions"
-              className="rounded-xl border border-white/[0.08] bg-white/[0.025] px-3.5 py-2 text-xs font-medium text-[#94A3B8] transition hover:border-[#8B5CF6]/25 hover:text-[#D8C7FF]"
-            >
-              My Decisions →
-            </a>
-          </header>
+      <span className="text-[10px] text-[#52627A]">
+        by Abhilash Joga
+      </span>
+    </div>
+  </div>
+
+  {/* Navigation */}
+  <div className="relative z-50 flex items-center gap-3">
+    <a
+      href="https://www.abhilashjoga.com"
+      className="relative z-50 cursor-pointer rounded-xl px-3.5 py-2 text-xs font-medium text-[#8290A5] transition hover:bg-white/[0.04] hover:text-[#D8C7FF]"
+    >
+      Portfolio ↗
+    </a>
+
+    <a
+      href="/decisions"
+      className="relative z-50 cursor-pointer rounded-xl border border-white/[0.08] bg-white/[0.025] px-3.5 py-2 text-xs font-medium text-[#94A3B8] transition hover:border-[#8B5CF6]/25 hover:text-[#D8C7FF]"
+    >
+      My Decisions →
+    </a>
+  </div>
+</header>
 
           {/* Main hero */}
           <section className="mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center pb-16 pt-2 text-center sm:pb-20 sm:pt-0 lg:-translate-y-10">
